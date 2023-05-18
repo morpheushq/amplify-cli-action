@@ -9,7 +9,7 @@
 🚀 :octocat: AWS Amplify CLI support for github actions. This action supports configuring and deploying your project to AWS as well as creating and undeploying amplify environments.
 
 ## Getting Started
-You can include the action in your workflow as `actions/amplify-cli-action@0.3.0`. Example (configuring amplify, building and deploying):
+You can include the action in your workflow as `morpheushq/amplify-cli-action@0.1.2`. Example (configuring amplify, building and deploying):
 
 ```yaml
 name: 'Amplify Deploy'
@@ -50,7 +50,7 @@ jobs:
         # npm run test
     
     - name: deploy
-      uses: ambientlight/amplify-cli-action@0.3.0
+      uses: morpheushq/amplify-cli-action@0.1.2
       with:
         amplify_command: publish
         amplify_env: prod
@@ -272,7 +272,7 @@ jobs:
         # npm run test
     
     - name: undeploy test environment
-      uses: ambientlight/amplify-cli-action@0.3.0
+      uses: morpheushq/amplify-cli-action@0.1.2
       # run even if previous step fails
       if: failure() || success()
       with:
@@ -295,7 +295,7 @@ As an alternative, one practical way could be to have a fixed sandbox environmen
 How to roll out a new image
 
 ``` bash
-VERSION=0.3.0
+VERSION=0.1.2
 
 docker build -t amplify-cli-action:$VERSION .
 
