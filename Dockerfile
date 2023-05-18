@@ -8,7 +8,7 @@ LABEL "com.github.actions.color"="orange"
 LABEL "repository"="https://github.com/morpheushq/amplify-cli-action"
 LABEL "homepage"="https://github.com/morpheushq/amplify-cli-action.git"
 
-LABEL org.opencontainers.image.source=https://github.com/morpheus/amplify-cli-action
+LABEL org.opencontainers.image.source=https://github.com/morpheushq/amplify-cli-action
 
 RUN npm install --global --unsafe-perm @aws-amplify/cli@latest
 
