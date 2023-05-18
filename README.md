@@ -237,7 +237,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [16.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -258,7 +258,7 @@ jobs:
       with:
         amplify_command: add_env
         amplify_env: ${{ steps.setenvname.outputs.amplifyenvname }}
-        amplify_cli_version: '3.17.1-alpha.35'
+        amplify_cli_version: 'latest'
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -278,7 +278,7 @@ jobs:
       with:
         amplify_command: delete_env
         amplify_env: ${{ steps.setenvname.outputs.amplifyenvname }}
-        amplify_cli_version: '3.17.1-alpha.35'
+        amplify_cli_version: 'latest'
         delete_lock: false
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
